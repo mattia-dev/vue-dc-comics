@@ -32,42 +32,47 @@ export default {
 <style lang="scss" scoped>
 @import "../style/colors.scss";
 
-  header {
-    height: 80px;
-    background-color: white;
+header {
+  height: 80px;
+  background-color: $white;
 
-    .container {
+  .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      height: 60px;
+      margin: 0 12px;
+    }
+
+    nav {
       height: 100%;
+    };
+
+    ul {
+      list-style: none;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      font-size: 16px;
+      font-weight: 600;
+      height: 100%;
 
-      img {
-        height: 60px;
+      li {
+        height: 80px;
+        line-height: 70px;
+        height: 100%;
         margin: 0 12px;
-      }
+        padding-top: 5px;
+        border-bottom: 5px solid white;
+        transition: .2s;
 
-      ul {
-        list-style: none;
-        display: flex;
-        font-size: 16px;
-        font-weight: 600;
-
-        li {
-          height: 80px;
-          line-height: 80px;
-          height: 100%;
-          margin: 0 12px;
-          padding-top: 5px;
-          border-bottom: 5px solid white;
-          transition: .2s;
-
-          &:hover {
-            color: $light-blue;
-            border-bottom: 5px solid $light-blue;
-          }
+        &:hover {
+          color: $light-blue;
+          border-bottom: 5px solid $light-blue;
         }
       }
     }
   }
+}
 </style>
