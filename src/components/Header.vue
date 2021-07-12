@@ -55,7 +55,7 @@ header {
       list-style: none;
       display: flex;
       font-size: 16px;
-      font-weight: 600;
+      font-weight: 500;
       height: 100%;
 
       li {
