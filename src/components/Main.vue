@@ -1,12 +1,29 @@
 <template>
   <main>
-      Content goes here
+    <div class="container">
+      <Card
+        v-for="(comic, index) in comics"
+        :key="index"
+        :title="comic.series"
+        :cover="comic.thumb"
+        :type="comic.type"
+        :price="comic.price"
+      />
+    </div>
   </main>
 </template>
 
 <script>
+import Card from './Card.vue';
+
 export default {
   name: 'Main',
+  components: {
+    Card,
+  },
+  props: {
+    comics: Array,
+  }
 }
 </script>
 
@@ -14,10 +31,13 @@ export default {
 @import "../style/colors.scss";
 
 main {
-    height: 80px;
     background-color: $black;
     color: $white;
-    text-align: center;
-    line-height: 80px;
+    
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 12px 0;
+    }
 }
 </style>

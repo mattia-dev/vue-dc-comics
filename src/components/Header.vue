@@ -45,6 +45,7 @@ header {
     img {
       height: 60px;
       margin: 0 12px;
+      cursor: pointer;
     }
 
     nav {
@@ -59,6 +60,7 @@ header {
       height: 100%;
 
       li {
+        cursor: pointer;
         height: 80px;
         line-height: 70px;
         height: 100%;

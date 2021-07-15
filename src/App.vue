@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header/>
-    <Main/>
+    <Main :comics="comics"/>
     <FooterBlueBar/>
     <FooterMainBar/>
     <FooterBottomBar/>
@@ -14,6 +14,7 @@ import Main from './components/Main.vue'
 import FooterBlueBar from './components/FooterBlueBar.vue'
 import FooterMainBar from './components/FooterMainBar.vue'
 import FooterBottomBar from './components/FooterBottomBar.vue'
+import comicsJson from './jsons/dc-comics.json'
 
 export default {
   name: 'App',
@@ -23,7 +24,12 @@ export default {
     FooterBlueBar,
     FooterMainBar,
     FooterBottomBar
-  }
+  },
+  data: function () {
+    return {
+      comics: comicsJson
+    };
+  },
 }
 </script>
 
